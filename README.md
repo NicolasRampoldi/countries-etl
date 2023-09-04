@@ -1,7 +1,7 @@
 # Countries ETL
 
 
-This Python project allows you to collect country data from the [rest countries API](https://restcountries.com/v3.1/all), store it in a database, generate an EExcel file with the data and send it via email.
+This Python project allows you to collect country data from the [rest countries API](https://restcountries.com/v3.1/all), store it in a database, generate an Excel file with the data and send it via email.
 
 ## Requirements
 
@@ -31,7 +31,7 @@ Before running the project, make sure you have the following installed:
     pip install -r requirements.txt
     ```
    
-4. Create a PostgreSQL database and run the script provided in /persistence/resources/schema.sql then set the following environment variables in /config:
+4. Create a PostgreSQL database and run the script provided in /persistence/resources/schema.sql then set the following environment variables in /config/.env:
 
     ```bash
     DB_USER=
@@ -52,13 +52,8 @@ Before running the project, make sure you have the following installed:
     ```bash
     python3 main.py
     ```
-
-2. To run the project once, execute the following command in the root folder:
-
-    ```bash
-    python3 main.py
-    ```
-3. To run the project periodically once per day, execute the following command in the root folder:
+   
+2. To run the project periodically once per day, execute the following command in the root folder:
 
     ```bash
     python3 main.py --daily
